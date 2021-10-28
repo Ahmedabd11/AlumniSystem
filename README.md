@@ -1,6 +1,6 @@
 # AlumniSystem
 
-A new Website that Basically Design and Develop with Angular and Node.js.Apply Basic CRUD Operations using APIs and routes we can create,update,delete,add faculty others workers data by using MongoDB as a Database.
+A new Website that Basically Design and Develop with basic HTML Styles, Angular and Node.js.Apply Basic CRUD Operations using APIs and routes we can create,update,delete,add faculty others workers data by using MongoDB as a Database.
 
 ## Getting Started
 
