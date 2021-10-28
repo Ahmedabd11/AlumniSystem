@@ -1,0 +1,180 @@
+
+
+
+<div class="card">
+<div class="card-body">
+<form [formGroup]="angForm" novalidate>
+    <div class="form-group">
+        <label class="col-md-2">Member Name</label>
+        <input type="text" class="form-control" formControlName="MemberName" #MemberName/>      
+    </div>
+    <div 
+    *ngIf="angForm.controls['MemberName'].invalid && 
+    (angForm.controls['MemberName'].dirty || 
+    angForm.controls['MemberName'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['MemberName'].errors.required">
+     Member Name is required
+    </div>
+        
+    </div>
+
+    
+    <div class="form-group">
+        <label class="col-md-2">University Name</label>
+        <input type="text" class="form-control" formControlName="UniversityName" #UniversityName/>      
+    </div>
+    <div 
+    *ngIf="angForm.controls['UniversityName'].invalid && 
+    (angForm.controls['UniversityName'].dirty || 
+    angForm.controls['UniversityName'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['UniversityName'].errors.required">
+        University Name is required
+    </div>
+        
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2">Department Name</label>
+        <input type="text" class="form-control" formControlName="DepartmentName" #DepartmentName/>      
+    </div>
+    <div 
+    *ngIf="angForm.controls['DepartmentName'].invalid && 
+    (angForm.controls['DepartmentName'].dirty || 
+    angForm.controls['DepartmentName'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['DepartmentName'].errors.required">
+        Department Name is required
+    </div>
+        
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2">Graduation Year</label>
+        <input type="text" class="form-control" formControlName="GraduationYear" #GraduationYear/>      
+    </div>
+    <div 
+    *ngIf="angForm.controls['GraduationYear'].invalid && 
+    (angForm.controls['GraduationYear'].dirty || 
+    angForm.controls['GraduationYear'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['GraduationYear'].errors.required">
+        Graduation Year is required
+    </div>
+        
+    </div>
+
+    
+    <div class="form-group">
+        <label class="col-md-2">Member Bio</label>
+        <textarea class="form-control" rows="7" cols="5" formControlName="MemberBio" #MemberBio></textarea>
+    </div>
+    <div 
+    *ngIf="angForm.controls['MemberBio'].invalid && 
+    (angForm.controls['MemberBio'].dirty || 
+    angForm.controls['MemberBio'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['MemberBio'].errors.required">
+     Member Bio is required
+    </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-2">Member Age</label>
+        <input type="text" class="form-control" formControlName="MemberAge" #MemberAge/>
+    </div>
+    <div 
+    *ngIf="angForm.controls['MemberAge'].invalid && 
+    (angForm.controls['MemberAge'].dirty || 
+    angForm.controls['MemberAge'].touched)"
+    class="alert alert-danger"
+    >
+    <div *ngIf="angForm.controls['MemberAge'].errors.required">
+     Member Age is required
+    </div>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary" 
+      [disabled]="angForm.pristine || angForm.invalid"
+      (click) = "addMember(MemberName.value,UniversityName.value,DepartmentName.value,GraduationYear.value,MemberBio.value,MemberAge.value)">
+      Create Alumni
+    </button>
+    </div>
+</form>
+</div>
+</div>
+
+<section style="height: 100vh;
+
+background-image: url('../../assets/img/groupw.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;">
+<div class="container-fluid mt-4 mb-4">
+  <div class="container pb-4 pt-4">
+      <div class="row">
+          <div class="col-md-4 col-sm-6 mt-3">
+              <div class="card">
+                  <img src="../../assets/img/card3.jpg" class="img-fluid"/>
+                  <div class="card-body">
+                      <p>
+                          This is a wider card with supporting text below as a natural lead-in to additional content.
+                           This content is a little bit longer.
+                      </p>
+                      <div class="group">
+                          <button class="btn btn-outline-secondary btn-sm">View</button>
+                          <button class="btn btn-outline-secondary btn-sm">Edit</button>
+                      </div>
+                  </div>
+
+                  
+              </div>
+          </div>
+      <div class="col-md-4 col-sm-6 mt-3">
+          <div class="card">
+              <img src="../../assets/img/card3.jpg" class="img-fluid"/>
+              <div class="card-body">
+                  <p>
+                      This is a wider card with supporting text below as a natural lead-in to additional content.
+                       This content is a little bit longer.
+                  </p>
+                  <div class="group">
+                      <button class="btn btn-outline-secondary btn-sm">View</button>
+                      <button class="btn btn-outline-secondary btn-sm">Edit</button>
+                  </div>
+              </div>
+
+              
+          </div>
+      </div>
+      <div class="col-md-4 mt-3 col-sm-6">
+          <div class="card">
+              <img src="../../assets/img/card3.jpg" class="img-fluid"/>
+              <div class="card-body">
+                  <p>
+                      This is a wider card with supporting text below as a natural lead-in to additional content.
+                       This content is a little bit longer.
+                  </p>
+                  <div class="group">
+                      <button class="btn btn-outline-secondary btn-sm">View</button>
+                      <button class="btn btn-outline-secondary btn-sm">Edit</button>
+                  </div>
+              </div>
+
+              
+          </div>
+      </div>
+      </div>
+  </div>
+</div>
+
+
+</section>

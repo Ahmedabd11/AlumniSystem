@@ -1,0 +1,33 @@
+
+
+
+
+<div class="d-flex justify-content-center ">
+  <h1>{{Login}}</h1>
+</div>
+
+<div class="d-flex justify-content-center">
+ 
+
+  
+  <form>
+    {{message}}
+   <label for="userId">
+        UserId
+      </label><br/>
+    
+
+      <input [(ngModel)]='userId' type="text" name="userId"/><br/><br/>
+      <label for="password">
+        Password
+      </label><br/>
+    
+      <input [(ngModel)]="password" type="password" name="password"/><br/><br/>
+    
+  
+    <button class="btn btn-primary" (click)="signin()">Submit </button><br/><br/>
+    <h5>Powered by Twitter :)</h5>
+  
+  </form>   
+  
+</div>    
